@@ -1,0 +1,159 @@
+# Nmap 7.99 scan initiated Thu Nov  5 10:46:33 2026 as: /usr/lib/nmap/nmap -sS -sV --open -p 21,22,23,53,80,443,554,8000,8080 -oN device_service_scan.txt 192.168.25.2 192.168.25.3 192.168.25.4 192.168.25.5 192.168.25.168
+Nmap scan report for 192.168.25.2
+Host is up (0.0042s latency).
+Not shown: 5 closed tcp ports (reset), 1 filtered tcp port (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http        webserver
+554/tcp  open  rtsp
+8000/tcp open  hik-connect HikVision camera control
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=11/5%Time=6AEC1841%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,23E,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Nov\x20202
+SF:6\x2010:46:40\x20GMT\r\nServer:\x20webserver\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nETag:\x20\"e0-14e-6554d72a\"\r\nContent-Length:\x20334\r\nCo
+SF:ntent-Type:\x20text/html\r\nConnection:\x20close\r\nLast-Modified:\x20W
+SF:ed,\x2015\x20Nov\x202023\x2014:35:22\x20GMT\r\n\r\n<!doctype\x20html><h
+SF:tml><head><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\
+SF:x20charset=utf-8\"><meta\x20http-equiv=\"pragma\"\x20content=\"no-cache
+SF:\"><meta\x20http-equiv=\"cache-control\"\x20content=\"no-cache,\x20must
+SF:-revalidate\"><meta\x20http-equiv=\"expires\"\x20content=\"0\"></head><
+SF:body></body><script>document\.location\.href\x20=\x20\"/doc/index\.html
+SF:\";</script></html>")%r(HTTPOptions,14F,"HTTP/1\.0\x20406\x20Not\x20Acc
+SF:eptable\r\nDate:\x20Thu,\x2005\x20Nov\x202026\x2010:46:40\x20GMT\r\nSer
+SF:ver:\x20webserver\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\
+SF:x20154\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n<!D
+SF:OCTYPE\x20html>\r\n<html><head><title>Option\x20Request\x20Denied</titl
+SF:e></head>\r\n<body>\r\n<p>The\x20OPTION\x20method\x20is\x20disabled\x20
+SF:on\x20this\x20server\.</p>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=11/5%Time=6AEC1891%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,A2,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\x20OPTIONS\r\nPublic:
+SF:\x20OPTIONS,\x20DESCRIBE,\x20GET_PARAMETER,\x20PAUSE,\x20PLAY,\x20SETUP
+SF:,\x20SET_PARAMETER,\x20TEARDOWN\r\nDate:\x20\x20Thu,\x20Nov\x2005\x2020
+SF:26\x2010:47:52\x20GMT\r\n\r\n");
+MAC Address: E8:A0:ED:F8:5A:FA (Hangzhou Hikvision Digital Technology)
+Service Info: Device: webcam
+
+Nmap scan report for 192.168.25.3
+Host is up (0.0018s latency).
+Not shown: 5 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http        webserver
+443/tcp  open  ssl/https   webserver
+554/tcp  open  rtsp
+8000/tcp open  hik-connect HikVision camera control
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=11/5%Time=6AEC1841%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,238,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Nov\x20202
+SF:6\x2010:46:39\x20GMT\r\nServer:\x20webserver\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nETag:\x20\"b30-14e-4\"\r\nContent-Length:\x20334\r\nContent-
+SF:Type:\x20text/html\r\nConnection:\x20close\r\nLast-Modified:\x20Thu,\x2
+SF:001\x20Jan\x201970\x2000:00:04\x20GMT\r\n\r\n<!doctype\x20html><html><h
+SF:ead><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20cha
+SF:rset=utf-8\"><meta\x20http-equiv=\"pragma\"\x20content=\"no-cache\"><me
+SF:ta\x20http-equiv=\"cache-control\"\x20content=\"no-cache,\x20must-reval
+SF:idate\"><meta\x20http-equiv=\"expires\"\x20content=\"0\"></head><body><
+SF:/body><script>document\.location\.href\x20=\x20\"/doc/index\.html\";</s
+SF:cript></html>")%r(HTTPOptions,14F,"HTTP/1\.0\x20406\x20Not\x20Acceptabl
+SF:e\r\nDate:\x20Thu,\x2005\x20Nov\x202026\x2010:46:40\x20GMT\r\nServer:\x
+SF:20webserver\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x20154
+SF:\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n<!DOCTYPE
+SF:\x20html>\r\n<html><head><title>Option\x20Request\x20Denied</title></he
+SF:ad>\r\n<body>\r\n<p>The\x20OPTION\x20method\x20is\x20disabled\x20on\x20
+SF:this\x20server\.</p>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=11/5%Time=6AEC1891%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,A2,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\x20OPTIONS\r\nPublic:
+SF:\x20OPTIONS,\x20DESCRIBE,\x20GET_PARAMETER,\x20PAUSE,\x20PLAY,\x20SETUP
+SF:,\x20SET_PARAMETER,\x20TEARDOWN\r\nDate:\x20\x20Thu,\x20Nov\x2005\x2020
+SF:26\x2010:47:52\x20GMT\r\n\r\n");
+MAC Address: 74:3F:C2:F9:D4:80 (Hangzhou Hikvision Digital Technology)
+Service Info: Device: webcam
+
+Nmap scan report for 192.168.25.4
+Host is up (0.0036s latency).
+Not shown: 6 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http        webserver
+554/tcp  open  rtsp
+8000/tcp open  hik-connect HikVision camera control
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=11/5%Time=6AEC1841%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,238,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Nov\x20202
+SF:6\x2010:46:40\x20GMT\r\nServer:\x20webserver\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nETag:\x20\"b3f-14e-4\"\r\nContent-Length:\x20334\r\nContent-
+SF:Type:\x20text/html\r\nConnection:\x20close\r\nLast-Modified:\x20Thu,\x2
+SF:001\x20Jan\x201970\x2000:00:04\x20GMT\r\n\r\n<!doctype\x20html><html><h
+SF:ead><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20cha
+SF:rset=utf-8\"><meta\x20http-equiv=\"pragma\"\x20content=\"no-cache\"><me
+SF:ta\x20http-equiv=\"cache-control\"\x20content=\"no-cache,\x20must-reval
+SF:idate\"><meta\x20http-equiv=\"expires\"\x20content=\"0\"></head><body><
+SF:/body><script>document\.location\.href\x20=\x20\"/doc/index\.html\";</s
+SF:cript></html>")%r(HTTPOptions,14F,"HTTP/1\.0\x20406\x20Not\x20Acceptabl
+SF:e\r\nDate:\x20Thu,\x2005\x20Nov\x202026\x2010:46:40\x20GMT\r\nServer:\x
+SF:20webserver\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x20154
+SF:\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n<!DOCTYPE
+SF:\x20html>\r\n<html><head><title>Option\x20Request\x20Denied</title></he
+SF:ad>\r\n<body>\r\n<p>The\x20OPTION\x20method\x20is\x20disabled\x20on\x20
+SF:this\x20server\.</p>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=11/5%Time=6AEC1891%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,A2,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\x20OPTIONS\r\nPublic:
+SF:\x20OPTIONS,\x20DESCRIBE,\x20GET_PARAMETER,\x20PAUSE,\x20PLAY,\x20SETUP
+SF:,\x20SET_PARAMETER,\x20TEARDOWN\r\nDate:\x20\x20Thu,\x20Nov\x2005\x2020
+SF:26\x2010:47:52\x20GMT\r\n\r\n");
+MAC Address: E8:A0:ED:FD:8B:38 (Hangzhou Hikvision Digital Technology)
+Service Info: Device: webcam
+
+Nmap scan report for 192.168.25.5
+Host is up (0.0034s latency).
+Not shown: 6 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+80/tcp   open  http        webserver
+554/tcp  open  rtsp
+8000/tcp open  hik-connect HikVision camera control
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=11/5%Time=6AEC1841%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,238,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Thu,\x2005\x20Nov\x20202
+SF:6\x2010:46:39\x20GMT\r\nServer:\x20webserver\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nETag:\x20\"b3f-14e-4\"\r\nContent-Length:\x20334\r\nContent-
+SF:Type:\x20text/html\r\nConnection:\x20close\r\nLast-Modified:\x20Thu,\x2
+SF:001\x20Jan\x201970\x2000:00:04\x20GMT\r\n\r\n<!doctype\x20html><html><h
+SF:ead><meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20cha
+SF:rset=utf-8\"><meta\x20http-equiv=\"pragma\"\x20content=\"no-cache\"><me
+SF:ta\x20http-equiv=\"cache-control\"\x20content=\"no-cache,\x20must-reval
+SF:idate\"><meta\x20http-equiv=\"expires\"\x20content=\"0\"></head><body><
+SF:/body><script>document\.location\.href\x20=\x20\"/doc/index\.html\";</s
+SF:cript></html>")%r(HTTPOptions,14F,"HTTP/1\.0\x20406\x20Not\x20Acceptabl
+SF:e\r\nDate:\x20Thu,\x2005\x20Nov\x202026\x2010:46:40\x20GMT\r\nServer:\x
+SF:20webserver\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x20154
+SF:\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n<!DOCTYPE
+SF:\x20html>\r\n<html><head><title>Option\x20Request\x20Denied</title></he
+SF:ad>\r\n<body>\r\n<p>The\x20OPTION\x20method\x20is\x20disabled\x20on\x20
+SF:this\x20server\.</p>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.99%I=7%D=11/5%Time=6AEC1891%P=x86_64-pc-linux-gnu%r(SIP
+SF:Options,A2,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\x20OPTIONS\r\nPublic:
+SF:\x20OPTIONS,\x20DESCRIBE,\x20GET_PARAMETER,\x20PAUSE,\x20PLAY,\x20SETUP
+SF:,\x20SET_PARAMETER,\x20TEARDOWN\r\nDate:\x20\x20Thu,\x20Nov\x2005\x2020
+SF:26\x2010:47:52\x20GMT\r\n\r\n");
+MAC Address: 04:03:12:8A:64:F1 (Hangzhou Hikvision Digital Technology)
+Service Info: Device: webcam
+
+Nmap scan report for 192.168.25.168
+Host is up (0.0035s latency).
+Not shown: 6 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    HikVision NVR or camera http config
+554/tcp  open  rtsp    Apple AirTunes rtspd
+8000/tcp open  ipcam   Hikvision IPCam control port
+MAC Address: 08:A1:89:05:C8:E8 (Hangzhou Hikvision Digital Technology)
+Service Info: OS: Mac OS X; Device: webcam; CPE: cpe:/o:apple:mac_os_x
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  5 10:49:13 2026 -- 5 IP addresses (5 hosts up) scanned in 160.34 seconds

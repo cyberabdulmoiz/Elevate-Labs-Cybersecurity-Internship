@@ -1,0 +1,13 @@
+# Nmap 7.99 scan initiated Thu Nov  5 10:36:05 2026 as: /usr/lib/nmap/nmap -sS --open -oN tcp_syn_scan.txt 192.168.25.1
+Nmap scan report for 192.168.25.1
+Host is up (0.0057s latency).
+Not shown: 996 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE
+22/tcp   open  ssh
+53/tcp   open  domain
+80/tcp   open  http
+1900/tcp open  upnp
+MAC Address: 78:8C:B5:2B:45:26 (TP-Link Systems)
+
+# Nmap done at Thu Nov  5 10:36:10 2026 -- 1 IP address (1 host up) scanned in 5.13 seconds

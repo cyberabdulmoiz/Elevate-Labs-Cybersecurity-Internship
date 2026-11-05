@@ -247,7 +247,7 @@ tcp.flags.reset == 1
 **Evidence:**
 
 - `screenshots/06-wireshark-syn-analysis.png`
-- `results/syn-scan-capture.pcapng` (if saved)
+- `results/syn-scan-capture.pcapng`
 
 The packet capture should be reviewed to confirm the observed flags before making packet-specific conclusions.
 

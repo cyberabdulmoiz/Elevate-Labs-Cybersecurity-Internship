@@ -67,7 +67,9 @@ ip route
 
 The results confirmed that the scanning machine was connected to the local network.
 
-**Evidence:** `screenshots/01-network-information.png`
+**Evidence — Network Configuration:**
+
+![Kali Linux Network Information](screenshots/01-network-information.png)
 
 ### 2.2 Host Discovery
 
@@ -89,8 +91,10 @@ The `-sn` option identifies responsive devices without performing a port scan.
 
 The discovered devices included a TP-Link router, Hikvision-associated network devices, and additional local endpoints.
 
-**Evidence:**
+**Evidence — Nmap Host Discovery:**
+
 ![Nmap Host Discovery](screenshots/02-host-discovery.png)
+
 ### 2.3 TCP SYN Port Scanning
 
 A TCP SYN scan was performed against the local router.
@@ -112,7 +116,9 @@ sudo nmap -sS --open \
 
 The scan identified **4 open TCP ports**. The remaining 996 ports in Nmap's default 1,000-port selection were reported as filtered.
 
-**Evidence:** `screenshots/03-tcp-syn-scan.png`
+**Evidence — TCP SYN Scan:**
+
+![Nmap TCP SYN Scan](screenshots/03-tcp-syn-scan.png)
 
 ### 2.4 Service and Version Detection
 
@@ -137,7 +143,9 @@ The service scan provided additional information about the router's exposed appl
 
 Service banners and version fingerprints are not sufficient to confirm a software vulnerability.
 
-**Evidence:** `screenshots/04-service-detection.png`
+**Evidence — Router Service Detection:**
+
+![Nmap Router Service Detection](screenshots/04-service-detection.png)
 
 ### 2.5 Additional Network Device Scanning
 
@@ -170,7 +178,11 @@ sudo nmap -sS -sV --open \
 - HTTPS (443) was detected on one device.
 - Nmap produced an inconsistent RTSP fingerprint on one device, demonstrating a limitation of automated service identification.
 
-**Evidence:** `results/device_service_scan.txt`
+**Evidence — CCTV Network Device Scan:**
+
+![Hikvision Network Device Scanning](screenshots/05-cctv-device-scan.png)
+
+**Saved Scan Results:** [View Device Service Scan](results/device_service_scan.txt)
 
 ## 3. Wireshark — TCP SYN Packet Analysis
 
@@ -244,10 +256,11 @@ RST packets:
 tcp.flags.reset == 1
 ```
 
-**Evidence:**
+**Evidence — Wireshark TCP SYN Analysis:**
 
-- `screenshots/06-wireshark-syn-analysis.png`
-- `results/syn-scan-capture.pcapng`
+![Wireshark TCP SYN Packet Analysis](screenshots/06-wireshark-syn-analysis.png)
+
+**Packet Capture:** `results/syn-scan-capture.pcapng` (if saved)
 
 The packet capture should be reviewed to confirm the observed flags before making packet-specific conclusions.
 
@@ -278,7 +291,7 @@ Open ports are not automatically vulnerabilities. However, unnecessary or improp
 ## 5. Evidence and Project Structure
 
 ```text
-Task-1-Network-Port-Scanning/
+Elevate-Labs-Task-1/
 │
 ├── README.md
 │

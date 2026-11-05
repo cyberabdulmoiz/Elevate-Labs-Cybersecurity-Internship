@@ -89,8 +89,8 @@ The `-sn` option identifies responsive devices without performing a port scan.
 
 The discovered devices included a TP-Link router, Hikvision-associated network devices, and additional local endpoints.
 
-**Evidence:** `screenshots/02-host-discovery.png`
-
+**Evidence:**
+![Nmap Host Discovery](screenshots/02-host-discovery.png)
 ### 2.3 TCP SYN Port Scanning
 
 A TCP SYN scan was performed against the local router.
